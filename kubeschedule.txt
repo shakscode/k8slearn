@@ -1,0 +1,5 @@
+kubectl get po -n kube-system
+if the scheduler pod id not available, we can manully schedule the pods to a node.
+
+but specifiying nodeName in a spec on object configutation file.
+in existing pod, a type=binding can be attached with nodeName in existing objectconfig file.
