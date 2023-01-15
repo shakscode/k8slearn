@@ -1,0 +1,48 @@
+in configmap we can define values in key value pair or even a lines of file.
+
+in pod under spec , we put env and wrtie configmapref and refer the configmap and the key in that.
+configmapkeyref is how pod refers to tag the configmap.
+
+drawback.
+cant refresh on its own.
+
+
+1. data :
+
+  #key:value
+  #nginx.conf(filename) | "xx
+  xxxx"
+  
+  
+ 2. also configmap can be mapped as mountpath.
+ 
+ step 1. decalre a configmap as with a file content, multiple files also can be referred.
+ 
+ 
+ step.
+ 
+ in specs of container, mention a volume mount and refer that to volume.
+ 
+ in the same volume, refer to the configmap.
+ 
+ 
+ eg:
+ 
+  volumemount
+    name: nginx
+    mountpath: /etc/nginx
+    
+ volumes:
+    -name: nginx
+    configmap:
+     name: nginx (name of configmap decalred in configmapfile
+     
+     (above snippet, volume is a configmap itself.)
+     
+     
+now the configmap files will be available under /etc/nginx
+ 
+    
+  
+ 
+ 
