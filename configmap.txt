@@ -75,7 +75,7 @@ handling statefull app can be hard
 
 on reversal/rollback
 kubectl rollout undo deploy my-app
- 
+ at very first instance it creats replicaset.. from next time it is faster as replica set already present.
     
   
  
