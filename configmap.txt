@@ -71,6 +71,10 @@ avoid versioning issue, change the entire cluster state in ine go.
 cons:
 requires double respurce
 handling statefull app can be hard
+
+
+on reversal/rollback
+kubectl rollout undo deploy my-app
  
     
   
