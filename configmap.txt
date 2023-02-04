@@ -41,6 +41,36 @@ cant refresh on its own.
      
      
 now the configmap files will be available under /etc/nginx
+
+
+
+
+deployment strategy
+
+rolling update
+pros:
+convinient satefull deployments
+viersion is slowly release across instances
+cons:
+rollout/rlback takes time
+no control over traffic
+
+recreate
+kills alll current veraion and brings v2
+applicate state is entirely renewed
+cons:
+downtime
+
+
+blie/green. or red/black
+
+instanr rollout/rb
+avoid versioning issue, change the entire cluster state in ine go.
+
+
+cons:
+requires double respurce
+handling statefull app can be hard
  
     
   
